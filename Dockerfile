@@ -25,11 +25,8 @@ ENV PATH="/usr/local/bin:$PATH"
 # Create working directory
 WORKDIR /app
 
-# Download the LLaMA 3.2 model
-RUN ollama pull llama3.2
-
 # Expose the API port (default is 11434)
 EXPOSE 11434
 
-# Command to run LLaMA 3.2 via Ollama
+# Run the LLaMA 3.2 model directly
 CMD ["ollama", "run", "llama3.2"]
