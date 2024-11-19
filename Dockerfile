@@ -28,5 +28,5 @@ WORKDIR /app
 # Expose the API port (default is 11434)
 EXPOSE 11434
 
-# Run the LLaMA 3.2 model directly
-CMD ["ollama", "run", "llama3.2"]
+# Command to start Ollama service and run llama3.2
+CMD ["sh", "-c", "ollama serve & sleep 5 && ollama run llama3.2"]
